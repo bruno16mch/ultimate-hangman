@@ -1,0 +1,14 @@
+body {
+    background-color: #DDD;
+}
+
+button {
+    background-color: #f46242;
+    color: white;
+    padding:15px 30px;
+    border: none;
+    text-decoration: blink;
+    display: inline-block;
+    font-size: 16px;
+}
+

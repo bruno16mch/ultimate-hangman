@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title link rel="shortcut icon" href="/hang/templates/hang/favicon.ico" type="image/x-icon" />
+        <title link rel="shortcut icon" href="/hang/templates/hang/favicon.ico" type="image/favicon.icon" />
         Hangman Game
-        </title>    
+        </title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href= "{% static 'hang/style.css' %}?q=1"/>
+        
     </head>
-    <body style= "margin: 0px;" bgcolor="#DDDDDD">
-    
-    
+    <body>
     <center>
         <p><font face="verdana" size = "6"> {{title}} </font></p>
         <a href = "/hang/other" target = "_blank">
@@ -15,7 +16,13 @@
                 Click me
             </button>
         </a>
-        <a href = "/hang/other" target = "_blank"><img src="https://static.pexels.com/photos/115045/pexels-photo-115045.jpeg" height = "250" width = "573"></a>
+        <a href = "/hang/other" target = "_blank">
+            <img src="https://static.pexels.com/photos/115045/pexels-photo-115045.jpeg" height = "250" width = "573">
+        </a>
+        <form action = "/hang/other" target = "_blank">
+            Word: <input type = "text" name = "word"><br>
+            <input type = "submit" value = "Enter"> 
+        </form>
     </center>
     <p><font face="verdana" size = "5">Words:</font></p>
     <ul>
