@@ -17,21 +17,20 @@
             </button>
         </a>
         <a href = "/hang/other" target = "_blank">
-            <img src="https://static.pexels.com/photos/115045/pexels-photo-115045.jpeg" height = "250" width = "573">
+            <img src="https://static.pexels.com/photos/115045/pexels-photo-115045.jpeg" height = "400" width = "917">
         </a>
-        <form action = "/hang/other" target = "_blank">
+        <form action = "/hang/other" target = "_blank" method = "post">{% csrf_token %}
+        
             Word: <input type = "text" name = "word"><br>
             <input type = "submit" value = "Enter"> 
         </form>
     </center>
     <p><font face="verdana" size = "5">Words:</font></p>
-    <ul>
-        <li>packets</li>
-        <li>packers</li>
-        <li>packing</li>
-        <li>earings</li>
-        <li>earplug</li>
-        
-    </ul>
+    <select class = "select-style">
+        <option value = "packets">packets</option>
+        <option value = "packing">packing</option>
+        <option value = "earings">earings</option>
+        <option value = "earplug">earplug</option>
+        </select>
     </body>
 </html>

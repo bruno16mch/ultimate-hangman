@@ -8,4 +8,4 @@ def index(request):
 def other(request):
     context = {"name" : "Bruno"}
     return render(request, 'hang/other.html', context)
-# Create your views here.
+

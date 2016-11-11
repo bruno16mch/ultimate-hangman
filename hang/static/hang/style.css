@@ -10,5 +10,18 @@ button {
     text-decoration: blink;
     display: inline-block;
     font-size: 16px;
+    
 }
+
+p {
+    background-color: grey;
+}
+
+.words {
+    
+}
+
+
+
+
 
