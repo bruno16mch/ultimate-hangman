@@ -1,36 +1,56 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title link rel="shortcut icon" href="/hang/templates/hang/favicon.ico" type="image/favicon.icon" />
-        Hangman Game
-        </title>
-        {% load static %}
+  <head>
+    <title>Starter Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    {% load static %}
         <link rel="stylesheet" type="text/css" href= "{% static 'hang/style.css' %}?q=1"/>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-default navbar-fixed-top" role = "navigation">
+      <a class="navbar-brand" href="#">Project name</a>
+      <ul class="nav navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="http://www.flatuicolorpicker.com/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="container">
+
+      <div class="starter-template">
+        <h1>Bootstrap starter template</h1>
+        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <pre>
+            {{screen}}
+          </pre>
+          <form action = "/hang/" method = "post">{% csrf_token %}
         
-    </head>
-    <body>
-    <center>
-        <p><font face="verdana" size = "6"> {{title}} </font></p>
-        <a href = "/hang/other" target = "_blank">
-            <button>
-                Click me
-            </button>
-        </a>
-        <a href = "/hang/other" target = "_blank">
-            <img src="https://static.pexels.com/photos/115045/pexels-photo-115045.jpeg" height = "400" width = "917">
-        </a>
-        <form action = "/hang/other" target = "_blank" method = "post">{% csrf_token %}
-        
-            Word: <input type = "text" name = "word"><br>
+            Guess a Letter: <input type = "text" name = "word"><br>
             <input type = "submit" value = "Enter"> 
-        </form>
-    </center>
-    <p><font face="verdana" size = "5">Words:</font></p>
-    <select class = "select-style">
-        <option value = "packets">packets</option>
-        <option value = "packing">packing</option>
-        <option value = "earings">earings</option>
-        <option value = "earplug">earplug</option>
-        </select>
-    </body>
+          </form>
+        </div>
+      </div>
+    </div><!-- /.container -->
+    
+    
+
+</body>
 </html>

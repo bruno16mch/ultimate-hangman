@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    {% extends 'hang/base.html' %}
+    {% block content %}
+    <head>
+        <title/>
+        Hangman Game
+        </title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href= "{% static 'hang/style.css' %}?q=1"/>
+        <link rel="stylesheet" type="text/css" href= "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+        
+        
+    </head>
+    <body>
+    <center>
+        <p>{{title}}</p>
+        <div class="row">
+            <div class="col-md-4">
+                <a href = "/hang/other" target = "_blank">
+                <button type="button" class="btn btn-danger">Danger</button>
+                </a>
+        </div>
+        <div class="col-md-4"><button class="btn btn-danger " type="submit">Airplane</button></div>
+        <div class="col-md-4"><button class="btn btn-danger" type="submit">Option</button></div>
+        </div>
+        
+        <a href = "/hang/other" target = "_blank" class = "image">
+            <img src="https://static.pexels.com/photos/115045/pexels-photo-115045.jpeg" height = "400" width = "917">
+        </a>
+        <form action = "/hang/other" method = "post">{% csrf_token %}
+        
+            Word: <input type = "text" name = "word"><br>
+            <input type = "submit" value = "Enter"> 
+        </form>
+    
+    <p>Words:</p>
+    <select class = "select-style">
+        <option value = "packets">Packets</option>
+        <option value = "packing">Packing</option>
+        <option value = "earings">Earings</option>
+        <option value = "earplug">Earplug</option>
+        </select>
+        <pre>
+            {{screen}}
+        </pre>
+    </center>
+    </body>
+    {% endblock %}
+</html>

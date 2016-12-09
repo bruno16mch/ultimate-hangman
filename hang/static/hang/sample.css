@@ -1,0 +1,46 @@
+.body {
+    background-color: #AEA8D3;
+}
+
+button {
+    color: #26C281;
+    padding:15px 30px;
+    display: inline-block;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.2s;
+}
+
+button:hover {
+    padding:15px 50px;
+    display: inline-block;
+    font-size: 16px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    
+}
+
+image:hover {
+    padding:15px 50px;
+    display: inline-block;
+    font-size: 16px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+p {
+    color: #DDD;
+    background-color: #117A65;
+    font-family: verdana;
+    font-size: 158%;
+    padding: 0px;
+}
+
+.select-style {
+    height: 40px;
+    width: 80px;
+}
+
+.col-md-4 { 
+    background-size: 50px 100px;
+}

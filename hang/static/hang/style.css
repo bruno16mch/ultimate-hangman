@@ -1,25 +1,49 @@
 body {
-    background-color: #DDD;
+    font-size: 14px;
+    background-color: #ECF0F1;
 }
 
-button {
-    background-color: #f46242;
+.starter-template {
+  padding-top: 15rem;
+  text-align: center;
+  color: #F64747;
+  font-family: 'Bungee', cursive;
+  
+}
+
+.navbar-default {
+    background-color: #34495E;
+    font-weight: normal;
+    border-color: #ECF0F1;
+}
+
+.navbar-default .navbar-brand {
+    color: #BDC3C7;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #2ABB9B;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #BDC3C7;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #2ABB9B;
+}
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a:focus {
     color: white;
-    padding:15px 30px;
-    border: none;
-    text-decoration: blink;
-    display: inline-block;
-    font-size: 16px;
-    
+    background-color: #2ABB9B;
 }
 
-p {
-    background-color: grey;
-}
-
-.words {
     
-}
+
+
 
 
 
